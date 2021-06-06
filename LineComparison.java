@@ -9,9 +9,18 @@
 
 package bridgelabz;
 
+import java.util.Scanner;
+
 class Line {
-    int x1 = 3, x2 = 6, y1 = 8, y2 = 2;
-    int a1 = 3, a2 = 6, b1 = 8, b2 = 2;
+    Scanner scanner = new Scanner(System.in);
+    int x1 = scanner.nextInt();
+    int y1 = scanner.nextInt();
+    int x2 = scanner.nextInt();
+    int y2 = scanner.nextInt();
+    int a1 = scanner.nextInt();
+    int b1= scanner.nextInt();
+    int a2 = scanner.nextInt();
+    int b2 = scanner.nextInt();
     double firstLineLength, secondLineLength;
 
     /**
@@ -25,12 +34,16 @@ class Line {
     /**
      * Method for checking equality of two lines.
      */
-    public void checkingEqualityOfLine() {
+    public void compareLine() {
         calculatingLengthOfLine();
         if (firstLineLength == secondLineLength) {
-            System.out.println("Lines are equal");
+            System.out.println("Both Lines are equal");
         } else {
-            System.out.println("Lines are not equal");
+            if(firstLineLength > secondLineLength) {
+                System.out.println("First line is longer than second line");
+            }else {
+                System.out.println("Second line is longer than First line");
+            }
         }
     }
 }
@@ -43,6 +56,6 @@ public class LineComparison {
         lineObject.calculatingLengthOfLine();
         System.out.println(lineObject.firstLineLength);
         System.out.println(lineObject.secondLineLength);
-        lineObject.checkingEqualityOfLine();
+        lineObject.compareLine();
     }
 }
