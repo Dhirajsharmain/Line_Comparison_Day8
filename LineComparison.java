@@ -32,7 +32,7 @@ class Line {
     }
 
     /**
-     * Method for checking equality of two lines.
+     * Method for comparing two lines using compareTo method.
      */
     public void compareLine() {
         calculatingLengthOfLine();
