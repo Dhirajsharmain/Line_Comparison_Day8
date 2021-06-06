@@ -7,4 +7,3 @@ _**Description**_ : Created a object named "Line" , Inside of Line Class or Obje
 **UC2-CheckingEquality**
 
 _**Description**_ : Created a method named "CheckingEqualityOfLines" for checking equality of two lines.
-
