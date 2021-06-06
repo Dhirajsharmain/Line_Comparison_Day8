@@ -15,7 +15,7 @@ class Line {
     double firstLineLength, secondLineLength;
 
     /**
-     * Method for calculating the length of line.
+     * Method for calculating the length of lines.
      */
     public void calculatingLengthOfLine() {
         firstLineLength = Math.sqrt(Math.pow(x2 - x1, 2) + (Math.pow(y2 - y1, 2)));
