@@ -18,7 +18,7 @@ class Line {
     int x2 = scanner.nextInt();
     int y2 = scanner.nextInt();
     int a1 = scanner.nextInt();
-    int b1= scanner.nextInt();
+    int b1 = scanner.nextInt();
     int a2 = scanner.nextInt();
     int b2 = scanner.nextInt();
     double firstLineLength, secondLineLength;
@@ -36,12 +36,15 @@ class Line {
      */
     public void compareLine() {
         calculatingLengthOfLine();
-        if (firstLineLength == secondLineLength) {
+        String stringFirst = String.valueOf(firstLineLength);
+        String stringSecond = String.valueOf(secondLineLength);
+        int check = stringFirst.compareTo(stringSecond);
+        if (check == 0) {
             System.out.println("Both Lines are equal");
         } else {
-            if(firstLineLength > secondLineLength) {
+            if (check > 0) {
                 System.out.println("First line is longer than second line");
-            }else {
+            } else {
                 System.out.println("Second line is longer than First line");
             }
         }
