@@ -26,10 +26,13 @@ public class LineComparison {
      * Method for checking equality of two lines.
      */
     private static void compareLine() {
-        if (firstLineLength == secondLineLength) {
+        String stringFirst = String.valueOf(firstLineLength);
+        String stringSecond = String.valueOf(secondLineLength);
+        int check = stringFirst.compareTo(stringSecond);
+        if (check == 0) {
             System.out.println("Both Lines are equal");
         } else {
-            if (firstLineLength > secondLineLength) {
+            if (check > 0) {
                 System.out.println("First line is longer than second line");
             } else {
                 System.out.println("Second line is longer than First line");
