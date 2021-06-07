@@ -25,11 +25,15 @@ public class LineComparison {
     /**
      * Method for checking equality of two lines.
      */
-    private static void checkingEqualityOfLine() {
+    private static void compareLine() {
         if (firstLineLength == secondLineLength) {
             System.out.println("Both Lines are equal");
         } else {
-            System.out.println("Lines are not equal");
+            if (firstLineLength > secondLineLength) {
+                System.out.println("First line is longer than second line");
+            } else {
+                System.out.println("Second line is longer than First line");
+            }
         }
     }
 
@@ -37,8 +41,8 @@ public class LineComparison {
         System.out.println("Welcome To Line Comparison Computation Program on Master Branch");
         firstLineLength = calculatingLengthOfLine(3, 2, 6, 8);
         System.out.println(firstLineLength);
-        secondLineLength = calculatingLengthOfLine(5,3,6,2);
+        secondLineLength = calculatingLengthOfLine(5, 3, 6, 2);
         System.out.println(secondLineLength);
-        checkingEqualityOfLine();
+        compareLine();
     }
 }
